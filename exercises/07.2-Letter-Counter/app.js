@@ -2,5 +2,20 @@ let par = "Lorem ipsum dolor sit amet consectetur adipiscing elit Curabitur eget
 let counts = {};
 
 // Your code here
+par = par.toLowerCase();
+
+for(let i = 0; i < par.length; i++){
+    let letra = par[i];
+    if(/^[a-z]$/.test(letra)){
+        if(!counts[letra]){
+            counts[letra] = 1;
+    }else{
+        counts[letra]++;
+    }
+
+
+    }
+    
+}
 
 console.log(counts);
